@@ -1,3 +1,6 @@
+# DeepV2D TensorFlow 2
+This repository is a fork of the original DeepV2D repository, which was written in TensorFlow 1.12.0. Here we changed the relevant parts of the code to run in TensorFlow 2.10.0. The original README is below, only the Requirements section was updated.
+
 # DeepV2D
 This repository contains the source code for our paper:
 
@@ -9,17 +12,17 @@ International Conference on Learning Representations (ICLR) 2020<br/>
 
 
 ## Requirements
-Our code was tested using Tensorflow 1.12.0 and Python 3. To use the code, you need to first install the following python packages:
+The code was tested on Ubuntu 20.04 with a NVIDIA RTX3090 GPU using Tensorflow 2.10.0, Python 3.10 and CUDA 11.1. To use the code, you need to first install the following python packages:
 
 First create a clean virtualenv 
 
   ```Shell
-  virtualenv --no-site-packages -p python3 deepv2d_env
-  source deepv2d_env/bin/activate
+  conda create -n "deepv2d-tf2" python=3.10 ipython
+  conda activate deepv2d-tf2
   ```
 
   ```Shell
-  pip install tensorflow-gpu==1.12.0
+  pip install tensorflow==2.10.0
   pip install h5py
   pip install easydict
   pip install scipy
@@ -27,6 +30,7 @@ First create a clean virtualenv
   pip install pyyaml
   pip install toposort
   pip install vtk
+  pip install tf_slim
   ```
 
 You can optionally compile our cuda backprojection operator by running
