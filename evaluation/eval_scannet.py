@@ -2,7 +2,7 @@ import sys
 sys.path.append('deepv2d')
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import matplotlib.pyplot as plt
 
 import cv2

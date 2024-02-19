@@ -1,8 +1,9 @@
 import sys
-sys.path.append('deepv2d')
+sys.path.append('src')
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import matplotlib.pyplot as plt
 
 import argparse
