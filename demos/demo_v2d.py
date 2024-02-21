@@ -1,5 +1,5 @@
 import sys
-sys.path.append('src')
+sys.path.append('deepv2dsrc')
 
 import numpy as np
 import tensorflow.compat.v1 as tf
